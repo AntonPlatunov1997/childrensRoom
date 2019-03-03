@@ -10,17 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class CreatRoomServlet extends HttpServlet {
-
+public class SortByRangeServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ToysRoom toysRoom = ToysRoom.getInstance();
-        toysRoom.fillRoom();
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        ToysRoom toysRoom =ToysRoom.getInstance();
         Sorts sort = new Sorts();
-        sort.sortByCost(toysRoom.getToyList());
-        req.setAttribute("listSortedByCost",toysRoom.getToyList());
+        sort.sortByCost(toysRoom.getSortedListByRange());
 
+        req.setAttribute("room",toysRoom.getSortedListByRange());
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("view/main.jsp");
         requestDispatcher.forward(req, resp);
+
     }
 }

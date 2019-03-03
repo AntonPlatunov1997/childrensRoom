@@ -7,12 +7,46 @@
     <!-- add servlet -->
     <servlet>
         <servlet-name>CreatingRoom</servlet-name>
-        <servlet-class>com.servlets.CreatRoomServlet</servlet-class>
+        <servlet-class>com.servlets.CreatingRoomServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
         <servlet-name>CreatingRoom</servlet-name>
         <url-pattern>/fill</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SortByPriceServlet</servlet-name>
+        <servlet-class>com.servlets.SortByPriceServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SortByPriceServlet</servlet-name>
+        <url-pattern>/sortingByCost</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>SortBySizeServlet</servlet-name>
+        <servlet-class>com.servlets.SortBySizeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SortBySizeServlet</servlet-name>
+        <url-pattern>/sortingBySize</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SortByRangeServlet</servlet-name>
+        <servlet-class>com.servlets.SortByRangeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SortByRangeServlet</servlet-name>
+        <url-pattern>/sortingByRange</url-pattern>
     </servlet-mapping>
 
 

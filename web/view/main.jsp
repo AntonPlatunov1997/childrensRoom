@@ -17,13 +17,16 @@
 </div>
 
 <div>
+    <h1>Budget:1800</h1>
+</div>
+<div>
     <div>
         <div>
             <h2>Toys</h2>
         </div>
     <%
-          if(request.getAttribute("listSortedByCost")!=null){
-            List<Toy> listByCost =(List<Toy>) request.getAttribute("listSortedByCost");
+          if(request.getAttribute("room")!=null){
+            List<Toy> listByCost =(List<Toy>) request.getAttribute("room");
             for (Toy toy:listByCost){
             out.println("<li>" + toy + "</li>");
           }
@@ -34,11 +37,27 @@
 </div>
 
 
-<form action="CreatingRoom" method="post" >
-    <button type="submit">Submit</button>
+
+<div>
+    <form action="sortingByCost" method="post" >
+        <button type="submit">Sort by Price</button>
 
 
 </form>
+
+<form action="sortingBySize" method="post" >
+    <button type="submit">Sort by Size</button>
+
+
+</form>
+
+<form action="sortingByRange" method="post" >
+    <button type="submit">Sort by Range</button>
+
+
+</form>
+
+</div>
 
 </body>
 </html>

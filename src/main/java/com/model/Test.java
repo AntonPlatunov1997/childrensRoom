@@ -15,28 +15,25 @@ public class Test {
  toysRoom.fillRoom();
         Sorts sort = new Sorts();
 
-
-        sort.sortByCost(toysRoom.getToyList());
-
-        System.out.println("sortBySize----------------------------------------");
         for (Toy toy:toysRoom.getToyList()){
             System.out.println(toy.toString());
         }
 
-        sort.sortBySize(toysRoom.getToyList());
-        System.out.println("By Size----------------------------------------------");
-        for (Toy toy:toysRoom.getToyList()){
-            System.out.println(toy.toString());
-        }
+//        System.out.println(toysRoom.checkingCurrentPrice());
 
         sort.sortByRange(toysRoom.getToyList(),toysRoom.getSortedListByRange());
 
-        System.out.println("------------------------------------BYRange");
+        sort.sortByCost(toysRoom.getSortedListByRange());
 
         for (Toy toy:toysRoom.getSortedListByRange()){
-            System.out.println(toy.toString());
+            System.out.println(toy);
         }
 
 
+
+
     }
+
+
+
 }
