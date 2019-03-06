@@ -5,14 +5,13 @@ import com.model.entities.toys.type.*;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static junit.framework.TestCase.fail;
 
 public class SortCheckingUtilTest {
 
 
-  SortUtil sortUtil = new SortUtil();
+  SortImpl sortImpl = new SortImpl();
     ArrayList<Toy> listToys = new ArrayList();
     ArrayList<Toy> listToysByRange= new ArrayList<>();
 
@@ -41,7 +40,7 @@ public class SortCheckingUtilTest {
     @Test
     public void sortByCost() {
      fillList();
-     sortUtil.sortByCost(listToys);
+     sortImpl.sortByCost(listToys);
      for (int i=0;i<listToys.size()-1;i++){
          if (listToys.get(i).getPrice()>listToys.get(i+1).getPrice()){
              fail();
@@ -56,7 +55,7 @@ public class SortCheckingUtilTest {
     @Test
     public void sortBySize() {
         fillList();
-        sortUtil.sortBySize(listToys);
+        sortImpl.sortBySize(listToys);
         for (int i=0;i<listToys.size()-1;i++){
             if (listToys.get(i).getSize().ordinal()<listToys.get(i+1).getSize().ordinal()){
                 fail();

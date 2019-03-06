@@ -1,4 +1,4 @@
-package com.model.constants;
+package com.view;
 
 public interface Messages {
     String SORTED_BY_COST= "input.sort.type.cost";

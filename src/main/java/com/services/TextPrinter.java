@@ -24,31 +24,14 @@ if (list!= null& !list.isEmpty()){
     }
 
 
-
-
-
-    public static String showMessages(Locale locale, String key) {
-
-        ResourceBundle bundle =
-                ResourceBundle.getBundle("messages", locale);
-        return bundle.getString(key);
-
-    }
-
-    public static String showMessages(String key) {
-
-        ResourceBundle bundle =
-                ResourceBundle.getBundle("messages", new Locale("ukr"));
-        return bundle.getString(key);
-
-    }
-
     public static String showMessages(String language,String key){
 
         ResourceBundle bundle =
-                ResourceBundle.getBundle("messages", new Locale("eng"));
+                ResourceBundle.getBundle("messages",new Locale(language));
         return bundle.getString(key);
 
     }
+
+
 
 }

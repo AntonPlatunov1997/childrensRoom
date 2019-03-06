@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class SortUtil implements Sort {
+public class SortImpl implements Sort {
 
     @Override
     public void sortByCost(List<Toy> toyList) {
