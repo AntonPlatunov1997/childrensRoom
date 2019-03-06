@@ -1,4 +1,4 @@
-package com.model;
+package com.services;
 
 import com.model.entities.toys.Ball;
 import com.model.entities.toys.Car;
@@ -6,31 +6,14 @@ import com.model.entities.toys.Toy;
 import com.model.entities.toys.type.Color;
 import com.model.entities.toys.type.Size;
 import com.model.entities.toys.type.TypeControl;
-import com.services.SortUtil;
+import org.junit.Test;
+
 
 import java.util.ArrayList;
 
-public class Test {
-    public static void main(String[] args) {
- ToysRoom toysRoom = ToysRoom.getInstance();
- toysRoom.fillRoom();
- Test test = new Test();
-        SortUtil sort = new SortUtil();
-        test.fillList();
-         int count=0;
-        for (Toy toy:test.listToys){
-            count=count+toy.getPrice();
+import static org.junit.Assert.*;
 
-        }
-        System.out.println(count);
-
-
-
-
-
-
-
-    }
+public class CheckingUtilTest {
 
     ArrayList<Toy> listToys = new ArrayList();
     void fillList(){
@@ -45,5 +28,19 @@ public class Test {
         listToys.add(new Ball(Size.SMALL, 40, Color.WHITE));
 
     }
-}
 
+
+    @Test
+    public void checkingCurrentPrice() {
+        fillList();
+        int total = 0;
+        for (Toy toy:listToys){
+            total += toy.getPrice();
+
+        }
+         assertEquals(total,950);
+
+    }
+
+
+}

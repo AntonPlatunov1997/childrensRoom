@@ -1,6 +1,6 @@
 package com.services;
 
-import com.entities.toys.Toy;
+import com.model.entities.toys.Toy;
 
 import java.util.List;
 

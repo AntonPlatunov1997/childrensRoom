@@ -1,4 +1,4 @@
-<%@ page import="com.entities.toys.Toy" %>
+<%@ page import="com.model.entities.toys.Toy" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Антон
@@ -7,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>Toy's room</title>
@@ -16,21 +17,24 @@
     <h1>Toy's Room</h1>
 </div>
 
-<div>
-    <h1>Budget:1800</h1>
-</div>
+
 <div>
     <div>
         <div>
             <h2>Toys</h2>
         </div>
     <%
-          if(request.getAttribute("room")!=null){
-            List<Toy> listByCost =(List<Toy>) request.getAttribute("room");
-            for (Toy toy:listByCost){
-            out.println("<li>" + toy + "</li>");
-          }
-          }
+
+
+        if (request.getAttribute("typeOfSort")!=null){
+            out.print("<h2>" +request.getAttribute("typeOfSort")+"</h2>");
+        }
+
+        if (request.getAttribute("list")!=null){
+            out.print(request.getAttribute("list"));
+        }
+
+
 
     %>
     </div>

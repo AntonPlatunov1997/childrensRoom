@@ -1,13 +1,13 @@
 package com.services;
 
-import com.entities.toys.Toy;
+import com.model.entities.toys.Toy;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Sorts implements Sort {
+public class SortUtil implements Sort {
+
     @Override
     public void sortByCost(List<Toy> toyList) {
         Collections.sort(toyList, Comparator.comparingInt(Toy::getPrice));

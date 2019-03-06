@@ -1,7 +1,7 @@
-package com.entities.toys;
+package com.model.entities.toys;
 
-import com.entities.toys.type.Color;
-import com.entities.toys.type.Size;
+import com.model.entities.toys.type.Color;
+import com.model.entities.toys.type.Size;
 
 public class Ball extends Toy {
 
